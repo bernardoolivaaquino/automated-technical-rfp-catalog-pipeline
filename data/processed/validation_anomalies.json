@@ -1,0 +1,310 @@
+{
+  "summary": {
+    "rfp_id": "RFP-AERO-2026-042",
+    "generated_at_utc": "2026-11-25T03:27:35Z",
+    "total_components": 56,
+    "valid_count": 41,
+    "valid_with_warnings_count": 2,
+    "quarantined_count": 13,
+    "total_anomalies": 16,
+    "flagged_records_count": 15,
+    "anomaly_counts_by_severity": {
+      "ERROR": 14,
+      "WARNING": 2
+    },
+    "anomaly_counts_by_code": {
+      "DUPLICATE_PART_NUMBER": 1,
+      "IMPLAUSIBLE_TEMP_BELOW_ABS_ZERO": 1,
+      "INVERTED_TEMP_RANGE": 1,
+      "MISSING_CERTIFICATION": 2,
+      "MISSING_DIMENSION": 1,
+      "MISSING_MATERIAL": 1,
+      "MISSING_PRESSURE_FOR_FLUID_PART": 1,
+      "MISSING_TEMP_RANGE": 1,
+      "NEGATIVE_OR_ZERO_DIMENSION": 1,
+      "NEGATIVE_PRESSURE": 1,
+      "TOLERANCE_OUT_OF_SPEC": 2,
+      "UNKNOWN_CATEGORY": 1,
+      "UNPARSEABLE_UNIT": 2
+    }
+  },
+  "records": [
+    {
+      "part_number": "TI64-BOLT-M8",
+      "supplier_name": "AeroFix Precision SA",
+      "category": "FASTENER",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:11",
+      "anomalies": [
+        {
+          "code": "DUPLICATE_PART_NUMBER",
+          "severity": "ERROR",
+          "field": "part_number",
+          "raw_value": "TI64-BOLT-M8",
+          "message": "Duplicate part number 'TI64-BOLT-M8'; first seen at supplier_catalog_dirty.csv:row:1"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-FST-TOL1",
+      "supplier_name": "LowCost Fasteners Ltd",
+      "category": "FASTENER",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:12",
+      "anomalies": [
+        {
+          "code": "TOLERANCE_OUT_OF_SPEC",
+          "severity": "ERROR",
+          "field": "tolerance_mm",
+          "raw_value": "0.65",
+          "message": "Tolerance ±0.65 mm exceeds FASTENER envelope limit of ±0.15 mm"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-FST-TOL2",
+      "supplier_name": "LowCost Fasteners Ltd",
+      "category": "FASTENER",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:13",
+      "anomalies": [
+        {
+          "code": "TOLERANCE_OUT_OF_SPEC",
+          "severity": "ERROR",
+          "field": "tolerance_mm",
+          "raw_value": "2.032",
+          "message": "Tolerance ±2.032 mm exceeds FASTENER envelope limit of ±0.15 mm"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-FST-NEG",
+      "supplier_name": "AéroVisserie Toulouse",
+      "category": "FASTENER",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:14",
+      "anomalies": [
+        {
+          "code": "NEGATIVE_OR_ZERO_DIMENSION",
+          "severity": "ERROR",
+          "field": "nominal_dim_mm",
+          "raw_value": "-5.0",
+          "message": "Nominal dimension must be > 0 mm (got -5.0 mm)"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-VLV-NOPRES",
+      "supplier_name": "MécaFluide Bordeaux",
+      "category": "VALVE",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:23",
+      "anomalies": [
+        {
+          "code": "MISSING_PRESSURE_FOR_FLUID_PART",
+          "severity": "ERROR",
+          "field": "max_pressure_mpa",
+          "raw_value": null,
+          "message": "Missing max pressure rating for VALVE component"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-VLV-NEGPRES",
+      "supplier_name": "Valcor Flight Systems",
+      "category": "VALVE",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:24",
+      "anomalies": [
+        {
+          "code": "NEGATIVE_PRESSURE",
+          "severity": "ERROR",
+          "field": "max_pressure_mpa",
+          "raw_value": "-1.5",
+          "message": "Max pressure must be > 0 MPa (got -1.5 MPa)"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-VLV-UNPARSE",
+      "supplier_name": "LowCost Fasteners Ltd",
+      "category": "VALVE",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:25",
+      "anomalies": [
+        {
+          "code": "UNPARSEABLE_UNIT",
+          "severity": "ERROR",
+          "field": "max_pressure_mpa",
+          "raw_value": "high pressure",
+          "message": "Unparseable pressure 'high pressure': Unparseable pressure value: 'high pressure'"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-VLV-INVTEMP",
+      "supplier_name": "HydraFlow Aerospace",
+      "category": "VALVE",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:26",
+      "anomalies": [
+        {
+          "code": "INVERTED_TEMP_RANGE",
+          "severity": "ERROR",
+          "field": "operating_temp",
+          "raw_value": "200.0..50.0",
+          "message": "Inverted temperature range: min 200.0 °C >= max 50.0 °C"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-ALY-NOMAT",
+      "supplier_name": "LowCost Fasteners Ltd",
+      "category": "ALLOY",
+      "validation_status": "VALID_WITH_WARNINGS",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:35",
+      "anomalies": [
+        {
+          "code": "MISSING_MATERIAL",
+          "severity": "WARNING",
+          "field": "material_canonical",
+          "raw_value": "N/A",
+          "message": "Missing canonical material specification"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-ALY-UNCERT",
+      "supplier_name": "EuroFasten GmbH",
+      "category": "ALLOY",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:36",
+      "anomalies": [
+        {
+          "code": "MISSING_CERTIFICATION",
+          "severity": "ERROR",
+          "field": "standards",
+          "raw_value": null,
+          "message": "Missing quality or aerospace certification standards"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-SL-NOTEMP",
+      "supplier_name": "Joints Aéronautiques SA",
+      "category": "SEAL",
+      "validation_status": "VALID_WITH_WARNINGS",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:42",
+      "anomalies": [
+        {
+          "code": "MISSING_TEMP_RANGE",
+          "severity": "WARNING",
+          "field": "operating_temp",
+          "raw_value": null,
+          "message": "Missing operating temperature range"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-SL-NOCERT",
+      "supplier_name": "LowCost Fasteners Ltd",
+      "category": "SEAL",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:43",
+      "anomalies": [
+        {
+          "code": "MISSING_CERTIFICATION",
+          "severity": "ERROR",
+          "field": "standards",
+          "raw_value": null,
+          "message": "Missing quality or aerospace certification standards"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-FIT-NODIM",
+      "supplier_name": "AeroFluid Connectors",
+      "category": "FITTING",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:49",
+      "anomalies": [
+        {
+          "code": "MISSING_DIMENSION",
+          "severity": "ERROR",
+          "field": "nominal_dim_mm",
+          "raw_value": null,
+          "message": "Missing nominal dimension for FITTING component"
+        }
+      ]
+    },
+    {
+      "part_number": "BAD-UNK-001",
+      "supplier_name": "LowCost Fasteners Ltd",
+      "category": "UNKNOWN",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_catalog_dirty.csv",
+      "source_type": "csv",
+      "source_location": "row:50",
+      "anomalies": [
+        {
+          "code": "UNPARSEABLE_UNIT",
+          "severity": "ERROR",
+          "field": "nominal_dim_mm",
+          "raw_value": "approx half inch?",
+          "message": "Unparseable nominal dimension 'approx half inch?': Unparseable length value: 'approx half inch?'"
+        },
+        {
+          "code": "UNKNOWN_CATEGORY",
+          "severity": "ERROR",
+          "field": "category",
+          "raw_value": "Unclassified Hardware",
+          "message": "Unrecognized component category: 'Unclassified Hardware'"
+        }
+      ]
+    },
+    {
+      "part_number": "CRYO-SNS-999",
+      "supplier_name": "Avionics SenseTech",
+      "category": "SENSOR",
+      "validation_status": "QUARANTINED",
+      "source_file": "supplier_spec_sheet_dirty.pdf",
+      "source_type": "pdf",
+      "source_location": "page:3:block:6",
+      "anomalies": [
+        {
+          "code": "IMPLAUSIBLE_TEMP_BELOW_ABS_ZERO",
+          "severity": "ERROR",
+          "field": "operating_temp",
+          "raw_value": "-300.0..120.0",
+          "message": "Operating temperature below absolute zero (-273.15 °C): [-300.0, 120.0] °C"
+        }
+      ]
+    }
+  ]
+}

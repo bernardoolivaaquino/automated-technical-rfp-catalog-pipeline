@@ -1,0 +1,57 @@
+part_number,supplier_name,category,description_en,language_detected,material_canonical,nominal_dim_mm,tolerance_mm,max_pressure_mpa,temp_min_c,temp_max_c,mass_kg,standards,unit_price_usd,lead_time_days,validation_status,anomaly_codes,source_type,source_location
+TI64-BOLT-M8,AeroFix Precision SA,FASTENER,Titanium hex head structural bolt for wing-spar attachment,en,Ti-6Al-4V,8.0,0.025,,-60.0,220.0,0.0145,AS9100D; AMS 4928; NASM21250,18.4,14,VALID,,csv,row:1
+TI64-BOLT-M10,Safran Fixations Lyon,FASTENER,Titanium structural hex bolt for wing-spar,fr,Ti-6Al-4V,10.0,0.03,,-65.0,200.0,0.0242,EN 9100; NASM21250; NADCAP,22.9,14,VALID,,csv,row:2
+NAS-6204-12,Pacific Aerospace Fasteners,FASTENER,Close-tolerance alloy steel shear bolt 1/4 inch shank,en,4340 Alloy Steel,6.35,0.0254,,-53.888888889,176.666666667,0.01842719,AS9100D; NAS6204; MIL-S-5000,9.75,10,VALID,,csv,row:3
+A286-NUT-M14,AéroVisserie Toulouse,FASTENER,High-temperature self-locking nut for landing gear,fr,A286 Stainless Steel,14.0,0.015,,-65.0,420.0,0.031,AS9100D; NASM25027; NADCAP,16.8,21,VALID,,csv,row:4
+INC718-STUD-38,Turbine Hardware Corp,FASTENER,Double-ended Inconel 718 turbine flange stud,en,Inconel 718,9.525,0.02,,-55.0,650.0,0.042,AS9100D; AMS 5662; NADCAP,34.5,21,VALID,,csv,row:5
+TI64-PIN-06,AeroFix Precision SA,FASTENER,Titanium shear pin,bilingual,Ti-6Al-4V,6.0,0.012,,-63.15,199.85,0.0084,AS9100D; EN 9100; AMS 4928,12.1,12,VALID,,csv,row:6
+MS21042-L4,Pacific Aerospace Fasteners,FASTENER,Self-locking reduced hexagon aerospace nut,en,A286 Stainless Steel,6.35,0.03,,-53.888888889,426.666666667,0.0048,AS9100D; MS21042; NASM21042,3.45,7,VALID,,csv,row:7
+AL7075-RIV-05,Safran Fixations Lyon,FASTENER,Flush structural aluminum alloy rivet 7075,fr,Aluminum 7075-T6,4.8,0.025,,-55.0,130.0,0.0021,EN 9100; NAS1097; ISO 9001,1.15,10,VALID,,csv,row:8
+SS316-SCREW-M6,EuroFasten GmbH,FASTENER,Corrosion-resistant socket head cap screw for avionics bay,en,316L Stainless Steel,6.0,0.04,,-60.0,260.0,0.0093,ISO 9001; EN 9100; DIN 912,2.6,8,VALID,,csv,row:9
+TI64-BOLT-10IN,Pacific Aerospace Fasteners,FASTENER,Imperial 1 inch structural titanium clevis bolt,en,Ti-6Al-4V,25.4,0.03,,-55.0,250.0,0.081646627,AS9100D; AMS 4928; NASM,44.0,18,VALID,,csv,row:10
+TI64-BOLT-M8,AeroFix Precision SA,FASTENER,Duplicate entry for titanium hex head structural bolt M8,en,Ti-6Al-4V,8.0,0.025,,-60.0,220.0,0.0145,AS9100D; AMS 4928,18.4,14,QUARANTINED,DUPLICATE_PART_NUMBER,csv,row:11
+BAD-FST-TOL1,LowCost Fasteners Ltd,FASTENER,Unfinished structural bolt with excessive dimensional play,en,4340 Alloy Steel,10.0,0.65,,-40.0,150.0,0.028,ISO 9001,3.1,5,QUARANTINED,TOLERANCE_OUT_OF_SPEC,csv,row:12
+BAD-FST-TOL2,LowCost Fasteners Ltd,FASTENER,Out-of-spec imperial bolt,bilingual,316L Stainless Steel,12.7,2.032,,-40.0,180.0,0.034019428,ISO 9001,4.2,6,QUARANTINED,TOLERANCE_OUT_OF_SPEC,csv,row:13
+BAD-FST-NEG,AéroVisserie Toulouse,FASTENER,Corrupted CAD import fastener with negative diameter,en,Ti-6Al-4V,-5.0,0.02,,-55.0,200.0,0.011,AS9100D,15.0,14,QUARANTINED,NEGATIVE_OR_ZERO_DIMENSION,csv,row:14
+VLV-174PH-25,HydraFlow Aerospace,VALVE,High-pressure proportional hydraulic control valve 25.4 mm bore,en,17-4PH Stainless Steel,25.4,0.04,24.131650526,-55.0,150.0,1.12,AS9100D; ISO 9001; ARP490,890.0,28,VALID,,csv,row:15
+VLV-FR-3000,MécaFluide Bordeaux,VALVE,High-pressure hydraulic control valve in steel 17-4PH,fr,17-4PH Stainless Steel,25.4,0.05,24.0,-53.888888889,148.888888889,1.088621688,EN 9100; ISO 9001; NADCAP,945.0,28,VALID,,csv,row:16
+VLV-CHK-19,HydraFlow Aerospace,VALVE,Inline aerospace hydraulic check valve 3/4 inch port,en,316L Stainless Steel,19.05,0.03,30.0,-54.0,135.0,0.42,AS9100D; AS4395; NADCAP,315.0,16,VALID,,csv,row:17
+VLV-SOL-12,MécaFluide Bordeaux,VALVE,Low-leakage fuel solenoid valve,bilingual,Inconel 718,12.7,0.025,14.5,-55.0,210.0,0.68,AS9100D; EN 9100; DO-160G,1120.0,30,VALID,,csv,row:18
+VLV-REL-5000,Valcor Flight Systems,VALVE,High-pressure hydraulic relief valve rated to 5000 PSI,en,17-4PH Stainless Steel,19.05,0.035,34.473786466,-53.888888889,135.0,0.85,AS9100D; MIL-PRF-5523; ISO 9001,760.0,21,VALID,,csv,row:19
+VLV-PNU-32,Valcor Flight Systems,VALVE,Pneumatic bleed-air butterfly shutoff valve,en,Inconel 625,32.0,0.06,2.2,-55.15,299.85,1.65,AS9100D; AMS 5599; NADCAP,1480.0,35,VALID,,csv,row:20
+VLV-MAN-08,HydraFlow Aerospace,VALVE,Compact manual bleed valve with imperial pressure rating,en,316L Stainless Steel,8.0,0.03,27.579029173,-50.0,180.0,0.195,AS9100D; ISO 9001,210.0,14,VALID,,csv,row:21
+VLV-BLEED-320,Turbine Hardware Corp,VALVE,Bleed-air isolation valve 32 MPa,bilingual,Inconel 718,30.0,0.04,32.0,-55.0,320.0,2.1,AS9100D; NADCAP; EN 9100,1950.0,42,VALID,,csv,row:22
+BAD-VLV-NOPRES,MécaFluide Bordeaux,VALVE,Hydraulic valve without specified nominal pressure,fr,316L Stainless Steel,20.0,0.05,,-40.0,140.0,0.78,AS9100D,490.0,20,QUARANTINED,MISSING_PRESSURE_FOR_FLUID_PART,csv,row:23
+BAD-VLV-NEGPRES,Valcor Flight Systems,VALVE,Hydraulic shuttle valve with corrupted negative pressure rating,en,17-4PH Stainless Steel,16.0,0.04,-1.5,-55.0,150.0,0.52,AS9100D; ISO 9001,410.0,18,QUARANTINED,NEGATIVE_PRESSURE,csv,row:24
+BAD-VLV-UNPARSE,LowCost Fasteners Ltd,VALVE,Auxiliary valve with non-numeric pressure specification,en,316L Stainless Steel,12.0,0.05,,-30.0,120.0,0.35,ISO 9001,180.0,15,QUARANTINED,UNPARSEABLE_UNIT,csv,row:25
+BAD-VLV-INVTEMP,HydraFlow Aerospace,VALVE,Shutoff valve with inverted min/max operating temperatures,en,17-4PH Stainless Steel,22.0,0.04,25.0,200.0,50.0,0.91,AS9100D; ISO 9001,640.0,25,QUARANTINED,INVERTED_TEMP_RANGE,csv,row:26
+INC718-BAR-25,Aubert & Duval Alloys,ALLOY,Precipitation-hardened Inconel 718 turbine shaft bar stock,en,Inconel 718,25.4,0.05,,-100.0,700.0,3.85,AS9100D; AMS 5662; NADCAP,420.0,21,VALID,,csv,row:27
+INC718-BAR-40,Special Metals Aerospace,ALLOY,Forged superalloy bar Inconel 718 for high-temperature shaft,fr,Inconel 718,40.0,0.08,,-70.0,680.0,6.2,EN 9100; AMS 5663; ISO 9001,615.0,21,VALID,,csv,row:28
+AL7075-PLT-16,Constellium Aero,ALLOY,Thick aluminum alloy plate 7075-T6 high-strength,fr,Aluminum 7075-T6,16.0,0.08,,-65.0,160.0,4.48,AS9100D; AMS 4045; NADCAP,185.0,12,VALID,,csv,row:29
+TI64-BIL-50,Aubert & Duval Alloys,ALLOY,Forged Ti-6Al-4V aerospace structural billet,en,Ti-6Al-4V,50.0,0.1,,-60.0,350.0,2.494758035,AS9100D; AMS 4928; EN 9100,540.0,25,VALID,,csv,row:30
+AL2024-SH-03,Constellium Aero,ALLOY,Alclad 2024-T3 fuselage skin sheet 3.2 mm gauge,en,Aluminum 2024-T3,3.2,0.05,,-53.888888889,121.111111111,1.9,AS9100D; AMS 4041; NADCAP,98.0,10,VALID,,csv,row:31
+INC625-TUB-19,Special Metals Aerospace,ALLOY,Seamless Inconel 625 exhaust duct tubing 3/4 inch OD,en,Inconel 625,19.05,0.05,,-100.0,815.0,1.35,AS9100D; AMS 5581; NADCAP,375.0,19,VALID,,csv,row:32
+SS174PH-ROD-22,Aubert & Duval Alloys,ALLOY,Stainless steel round bar 17-4PH H900,fr,17-4PH Stainless Steel,22.0,0.04,,-55.0,315.0,2.95,EN 9100; AMS 5643; ISO 9001,162.0,14,VALID,,csv,row:33
+A286-BAR-30,Special Metals Aerospace,ALLOY,Heat-treated A286 iron-base superalloy round bar,en,A286 Stainless Steel,30.0,0.06,,-73.15,649.85,3.4,AS9100D; AMS 5732; NADCAP,295.0,18,VALID,,csv,row:34
+BAD-ALY-NOMAT,LowCost Fasteners Ltd,ALLOY,Extruded aerospace bar stock with missing alloy designation,en,,25.0,0.05,,-50.0,300.0,2.2,AS9100D,110.0,12,VALID_WITH_WARNINGS,MISSING_MATERIAL,csv,row:35
+BAD-ALY-UNCERT,EuroFasten GmbH,ALLOY,Uncertified alloy bar without material traceability,fr,Aluminum 7075-T6,20.0,0.05,,-55.0,150.0,1.8,,65.0,7,QUARANTINED,MISSING_CERTIFICATION,csv,row:36
+SEAL-FVMQ-028,Joints Aéronautiques SA,SEAL,Kerosene-resistant fluorosilicone O-ring Jet-A1,fr,Fluorosilicone (FVMQ),28.0,0.05,14.5,-60.0,210.0,0.012,AS9100D; AMS-R-25988; AS568,14.5,10,VALID,,csv,row:37
+SEAL-FKM-035,Parker Aerospace Seals,SEAL,Viton FKM high-temperature hydraulic actuator O-ring,en,FKM (Viton),35.0,0.06,21.0,-40.0,220.0,0.015592238,AS9100D; AMS 7276; AS568,11.8,9,VALID,,csv,row:38
+SEAL-PTFE-020,Parker Aerospace Seals,SEAL,Spring-energized PTFE dynamic rod seal for flight actuators,en,PTFE,20.0,0.03,30.0,-53.888888889,232.222222222,0.0185,AS9100D; MIL-P-46191; ISO 9001,38.0,15,VALID,,csv,row:39
+SEAL-FFKM-042,Joints Aéronautiques SA,SEAL,High chemical-inertia perfluoroelastomer seal,fr,FFKM (Kalrez),42.0,0.05,18.0,-25.0,300.0,0.022,EN 9100; AMS 7257; NADCAP,82.0,14,VALID,,csv,row:40
+SEAL-EPDM-025,Parker Aerospace Seals,SEAL,Skydrol-compatible EPDM hydraulic manifold O-ring,en,EPDM,25.4,0.04,20.68427188,-55.0,150.0,0.0098,AS9100D; NAS1613; AS568,7.9,7,VALID,,csv,row:41
+BAD-SL-NOTEMP,Joints Aéronautiques SA,SEAL,Static seal without qualified temperature range,fr,Fluorosilicone (FVMQ),30.0,0.05,12.0,,,0.014,AS9100D; AS568,10.2,10,VALID_WITH_WARNINGS,MISSING_TEMP_RANGE,csv,row:42
+BAD-SL-NOCERT,LowCost Fasteners Ltd,SEAL,Unverified elastomeric O-ring missing quality standards,en,FKM (Viton),24.0,0.05,15.0,-30.0,180.0,0.01,,4.5,5,QUARANTINED,MISSING_CERTIFICATION,csv,row:43
+FIT-AN815-08,AeroFluid Connectors,FITTING,Flared hydraulic union fitting 1/2 inch aluminum alloy,en,Aluminum 7075-T6,12.7,0.03,20.68427188,-55.0,135.0,0.036,AS9100D; SAE AS4395; MS21902,29.0,12,VALID,,csv,row:44
+FIT-TI-012,Raccords Aviation Nice,FITTING,High-pressure titanium 90-degree elbow hydraulic fitting,fr,Ti-6Al-4V,12.0,0.025,35.0,-55.0,205.0,0.048,EN 9100; AS9100D; SAE AS4395,132.0,18,VALID,,csv,row:45
+SNS-TEMP-PT100,Avionics SenseTech,SENSOR,Fuel RTD probe,bilingual,316L Stainless Steel,12.7,0.02,18.0,-60.0,260.0,0.095,AS9100D; DO-160G; EN 9100,415.0,21,VALID,,csv,row:46
+SNS-PRS-250,Avionics SenseTech,SENSOR,Absolute hydraulic line pressure transducer 25 MPa,en,Inconel 625,15.0,0.02,25.0,-55.0,175.0,0.14,AS9100D; DO-160G; MIL-STD-810,590.0,21,VALID,,csv,row:47
+ACT-ROT-400,Systèmes Vol Toulouse,ACTUATOR,Flap EMA actuator,bilingual,17-4PH Stainless Steel,45.0,0.03,22.0,-55.0,135.0,1.85,AS9100D; MIL-PRF-5440; EN 9100,2180.0,35,VALID,,csv,row:48
+BAD-FIT-NODIM,AeroFluid Connectors,FITTING,Bulkhead adapter tee missing nominal port dimension,en,Ti-6Al-4V,,0.03,28.0,-55.0,200.0,0.054,AS9100D; SAE AS4395,115.0,15,QUARANTINED,MISSING_DIMENSION,csv,row:49
+BAD-UNK-001,LowCost Fasteners Ltd,UNKNOWN,Ambiguous bracket assembly with informal sizing note,en,Aluminum 6061-T6,,0.05,,-20.0,100.0,0.075,ISO 9001,19.0,10,QUARANTINED,UNPARSEABLE_UNIT; UNKNOWN_CATEGORY,csv,row:50
+TI-FIT-038,Raccords Aviation Nice,FITTING,Titanium hydraulic bulkhead fitting,bilingual,Ti-6Al-4V,9.525,0.025,35.0,-55.0,205.0,0.042,AS9100D; SAE AS4395; NADCAP,148.5,14,VALID,,pdf,page:1:block:1
+CRYO-VLV-112,MécaFluide Bordeaux,VALVE,Cryogenic shutoff valve,bilingual,Inconel 718,25.4,0.05,24.0,-196.15,149.85,1.45,AS9100D; ISO 9001; EN 9100,1240.0,28,VALID,,pdf,page:1:block:2
+DPS-SNS-404,Avionics SenseTech,SENSOR,Differential pressure transducer,bilingual,316L Stainless Steel,12.7,0.015,24.131650526,-53.888888889,148.888888889,0.185,AS9100D; DO-160G; MIL-STD-810,680.0,21,VALID,,pdf,page:2:block:3
+ACT-ELH-710,Systèmes Vol Toulouse,ACTUATOR,Electro-hydraulic linear actuator,bilingual,17-4PH Stainless Steel,50.0,0.02,28.0,-54.0,135.0,1.179340162,AS9100D; MIL-PRF-5440; NADCAP,2450.0,35,VALID,,pdf,page:2:block:4
+TI-SEAL-088,Joints Aéronautiques SA,SEAL,High-temp metallic C-seal,bilingual,Inconel X-750,38.1,0.03,42.0,-100.0,480.0,0.026932047,AS9100D; AMS 5542; ISO 9001,94.0,10,VALID,,pdf,page:3:block:5
+CRYO-SNS-999,Avionics SenseTech,SENSOR,Corrupted cryo sensor,bilingual,316L Stainless Steel,12.7,0.02,20.0,-300.0,120.0,0.11,AS9100D,510.0,18,QUARANTINED,IMPLAUSIBLE_TEMP_BELOW_ABS_ZERO,pdf,page:3:block:6

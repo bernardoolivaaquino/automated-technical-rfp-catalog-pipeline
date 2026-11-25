@@ -1,0 +1,99 @@
+# Technical RFP Compliance Report — {{ report.rfp_id }}
+
+**RFP Title:** {{ report.rfp_title }}  
+**Generated (UTC):** {{ report.generated_at_utc }}  
+**Source Files:** {{ report.source_files | join(', ') if report.source_files else 'N/A' }}
+
+---
+
+## 1. Executive KPI Summary
+
+| Metric | Value |
+| :--- | ---: |
+| Total Raw Records Ingested | {{ report.metrics.total_raw_records }} |
+| CSV Records Ingested | {{ report.metrics.csv_records }} |
+| PDF Records Ingested | {{ report.metrics.pdf_records }} |
+| Valid Components (`VALID`) | {{ report.metrics.valid_count }} |
+| Valid with Warnings (`VALID_WITH_WARNINGS`) | {{ report.metrics.valid_with_warnings_count }} |
+| Quarantined Components (`QUARANTINED`) | {{ report.metrics.quarantined_count }} |
+| Total Validation Anomalies Detected | {{ report.metrics.total_anomalies }} |
+| Total RFP Requirements Evaluated | {{ report.metrics.total_requirements }} |
+| Compliant Requirements (`COMPLIANT`) | {{ report.metrics.compliant_count }} |
+| Partial Compliance (`PARTIAL_COMPLIANCE`) | {{ report.metrics.partial_count }} |
+| Non-Compliant (`NON_COMPLIANT`) | {{ report.metrics.non_compliant_count }} |
+| Overall Compliance Rate | {{ "%.1f"|format(report.metrics.compliance_rate_pct) }}% |
+| Pipeline Execution Time | {{ "%.3f"|format(report.metrics.execution_time_seconds) }} s |
+
+---
+
+## 2. Master Compliance Matrix
+
+| REQ-ID | Title | Category | Status | Recommended P/N | Supplier | Score | Unit Price | Lead Time |
+| :--- | :--- | :--- | :--- | :--- | :--- | ---: | ---: | ---: |
+{% for res in report.compliance_results %}
+{% set best = res.best_match %}
+| {{ res.requirement.req_id }} | {{ res.requirement.title }} | {{ res.requirement.category.value }} | **{{ res.overall_status.value }}** | {{ best.part_number if best else '---' }} | {{ best.supplier_name if best else '---' }} | {{ "%.1f%%"|format(best.compliance_score) if best else '0.0%' }} | {{ "$%.2f"|format(best.unit_price_usd) if (best and best.unit_price_usd is not none) else 'N/A' }} | {{ "%d d"|format(best.lead_time_days) if (best and best.lead_time_days is not none) else 'N/A' }} |
+{% else %}
+| --- | No requirements evaluated | --- | --- | --- | --- | --- | --- | --- |
+{% endfor %}
+
+---
+
+## 3. Detailed Requirement-by-Requirement Verification
+
+{% for res in report.compliance_results %}
+### {{ res.requirement.req_id }}: {{ res.requirement.title }}
+
+- **Category:** `{{ res.requirement.category.value }}` | **Language:** `{{ res.requirement.language }}` | **Overall Status:** **{{ res.overall_status.value }}**
+- **Candidates Evaluated:** {{ res.evaluated_candidates_count }} | **Quarantined Excluded:** {{ res.quarantined_excluded_count }}
+- **Engineering Recommendation:** {{ res.recommendation }}
+
+{% if res.best_match %}
+{% set best = res.best_match %}
+**Top Ranked Candidate:** `{{ best.part_number }}` — *{{ best.supplier_name }}* (`{{ best.source_type }}`, `{{ best.validation_status }}`, Score: **{{ "%.1f"|format(best.compliance_score) }}%**)
+
+| Criterion | Required | Actual | Passed | Margin / Verification Note |
+| :--- | :--- | :--- | :---: | :--- |
+{% for chk in best.criteria_checks %}
+| {{ chk.criterion }} | {{ chk.required }} | {{ chk.actual }} | {{ 'PASS' if chk.passed else 'FAIL' }} | {{ chk.margin_note }} |
+{% endfor %}
+
+{% if best.discrepancies %}
+**Discrepancies:**
+{% for d in best.discrepancies %}
+- {{ d }}
+{% endfor %}
+{% endif %}
+
+{% if best.waiver_notes %}
+**Engineering Waiver & Warning Notes:**
+{% for w in best.waiver_notes %}
+- {{ w }}
+{% endfor %}
+{% endif %}
+
+{% if res.alternative_matches %}
+**Alternative Candidates:**
+{% for alt in res.alternative_matches %}
+- `{{ alt.part_number }}` ({{ alt.supplier_name }}) — {{ alt.compliance_status.value }} ({{ "%.1f"|format(alt.compliance_score) }}%, {{ "$%.2f"|format(alt.unit_price_usd) if alt.unit_price_usd is not none else 'N/A' }}, {{ "%d d"|format(alt.lead_time_days) if alt.lead_time_days is not none else 'N/A' }} lead)
+{% endfor %}
+{% endif %}
+{% else %}
+*No non-quarantined catalog candidates were available in category `{{ res.requirement.category.value }}`.*
+{% endif %}
+
+---
+
+{% endfor %}
+
+## 4. Data Quality & Quarantine Audit
+
+{% if quarantined_components %}
+| Part Number | Supplier | Category | Source | Anomaly Codes | Engineering Messages |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+{% for comp in quarantined_components %}
+| `{{ comp.part_number }}` | {{ comp.supplier_name }} | {{ comp.category.value }} | {{ comp.source_type }} ({{ comp.source_location }}) | {{ comp.anomalies | map(attribute='code') | map(attribute='value') | join(', ') }} | {{ comp.anomalies | map(attribute='message') | join(' ; ') }} |
+{% endfor %}
+{% else %}
+*No components were quarantined during this pipeline run.*
+{% endif %}

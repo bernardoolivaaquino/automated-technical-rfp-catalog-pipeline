@@ -1,0 +1,176 @@
+\documentclass[10pt,a4paper,landscape]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.2cm,top=1.8cm,bottom=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{textcomp}
+\usepackage{array}
+
+\definecolor{navyblue}{RGB}{18,48,88}
+\definecolor{slatetext}{RGB}{65,75,90}
+\definecolor{okgreen}{RGB}{22,110,56}
+\definecolor{warnamber}{RGB}{175,105,0}
+\definecolor{failred}{RGB}{170,32,32}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=navyblue,
+  urlcolor=navyblue,
+  pdftitle={SI Engineering Datasheet - \VAR{report.rfp_id | escape_latex}},
+  pdfauthor={Automated Technical RFP Catalog Pipeline}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textcolor{slatetext}{RFP Compliance \& SI Engineering Datasheet --- \VAR{report.rfp_id | escape_latex}}}
+\rhead{\small\textcolor{slatetext}{Generated: \VAR{report.generated_at_utc | escape_latex}}}
+\cfoot{\small Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.22}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries\textcolor{navyblue}{Technical SI Engineering Datasheet \& RFP Compliance Matrix}}\\[0.35em]
+  {\large\bfseries \VAR{report.rfp_id | escape_latex} --- \VAR{report.rfp_title | escape_latex}}\\[0.3em]
+  {\small\textcolor{slatetext}{Generated (UTC): \VAR{report.generated_at_utc | escape_latex} \quad|\quad Sources: \VAR{(report.source_files | join(', ')) | escape_latex}}}
+\end{center}
+
+\vspace{0.4em}
+
+\begin{center}
+\begin{tabular}{@{}lrlrlrlr@{}}
+\toprule
+\textbf{Raw Records:} & \VAR{report.metrics.total_raw_records} &
+\textbf{CSV / PDF:} & \VAR{report.metrics.csv_records} / \VAR{report.metrics.pdf_records} &
+\textbf{Approved (Valid / Warn):} & \VAR{report.metrics.valid_count} / \VAR{report.metrics.valid_with_warnings_count} &
+\textbf{Quarantined:} & \VAR{report.metrics.quarantined_count} \\
+\textbf{Requirements:} & \VAR{report.metrics.total_requirements} &
+\textbf{Compliant:} & \VAR{report.metrics.compliant_count} &
+\textbf{Partial / Non-Compliant:} & \VAR{report.metrics.partial_count} / \VAR{report.metrics.non_compliant_count} &
+\textbf{Compliance Rate:} & \VAR{"%.1f"|format(report.metrics.compliance_rate_pct)}\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{1. Approved SI Engineering Catalog (\VAR{approved_components | length} Components)}
+
+\begingroup
+\scriptsize
+\begin{longtable}{@{}
+  >{\raggedright\arraybackslash}p{2.4cm}
+  >{\raggedright\arraybackslash}p{2.7cm}
+  >{\raggedright\arraybackslash}p{1.4cm}
+  >{\raggedright\arraybackslash}p{2.4cm}
+  r
+  r
+  r
+  c
+  r
+  >{\raggedright\arraybackslash}p{3.4cm}
+  >{\raggedright\arraybackslash}p{2.5cm}
+@{}}
+\toprule
+\textbf{Part Number} & \textbf{Supplier} & \textbf{Category} & \textbf{Material} & \textbf{Dim (mm)} & \textbf{Tol (mm)} & \textbf{Press (MPa)} & \textbf{Temp (\textdegree C)} & \textbf{Mass (kg)} & \textbf{Standards} & \textbf{Status} \\
+\midrule
+\endfirsthead
+
+\multicolumn{11}{@{}l}{\textit{\small Table 1 (continued): Approved SI Engineering Catalog}} \\
+\toprule
+\textbf{Part Number} & \textbf{Supplier} & \textbf{Category} & \textbf{Material} & \textbf{Dim (mm)} & \textbf{Tol (mm)} & \textbf{Press (MPa)} & \textbf{Temp (\textdegree C)} & \textbf{Mass (kg)} & \textbf{Standards} & \textbf{Status} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{11}{r@{}}{\textit{\small Continued on next page...}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+\BLOCK{if approved_components}
+\BLOCK{for c in approved_components}
+\VAR{c.part_number | escape_latex} &
+\VAR{c.supplier_name | escape_latex} &
+\VAR{c.category.value | escape_latex} &
+\VAR{c.material_canonical | escape_latex} &
+\BLOCK{if c.nominal_dim_mm is not none}\VAR{"%.2f"|format(c.nominal_dim_mm)}\BLOCK{else}---\BLOCK{endif} &
+\BLOCK{if c.tolerance_mm is not none}$\pm$\VAR{"%.3f"|format(c.tolerance_mm)}\BLOCK{else}---\BLOCK{endif} &
+\BLOCK{if c.max_pressure_mpa is not none}\VAR{"%.2f"|format(c.max_pressure_mpa)}\BLOCK{else}---\BLOCK{endif} &
+\BLOCK{if c.temp_min_c is not none and c.temp_max_c is not none}\VAR{"%.0f"|format(c.temp_min_c)} to \VAR{"%.0f"|format(c.temp_max_c)}\BLOCK{else}---\BLOCK{endif} &
+\BLOCK{if c.mass_kg is not none}\VAR{"%.3f"|format(c.mass_kg)}\BLOCK{else}---\BLOCK{endif} &
+\VAR{(c.standards | join(', ')) | escape_latex} &
+\BLOCK{if c.validation_status == 'VALID'}\textcolor{okgreen}{\VAR{c.validation_status | escape_latex}}\BLOCK{else}\textcolor{warnamber}{\VAR{c.validation_status | escape_latex}}\BLOCK{endif} \\
+\BLOCK{endfor}
+\BLOCK{else}
+\multicolumn{11}{c}{No approved components available in catalog.} \\
+\BLOCK{endif}
+\end{longtable}
+\endgroup
+
+\newpage
+
+\section*{2. RFP Compliance Traceability Matrix (\VAR{report.compliance_results | length} Requirements)}
+
+\begingroup
+\scriptsize
+\begin{longtable}{@{}
+  >{\raggedright\arraybackslash}p{1.6cm}
+  >{\raggedright\arraybackslash}p{4.6cm}
+  >{\raggedright\arraybackslash}p{2.8cm}
+  >{\raggedright\arraybackslash}p{2.5cm}
+  >{\raggedright\arraybackslash}p{2.9cm}
+  r
+  >{\raggedright\arraybackslash}p{8.4cm}
+@{}}
+\toprule
+\textbf{REQ-ID} & \textbf{Requirement Title} & \textbf{Status} & \textbf{Recommended P/N} & \textbf{Supplier} & \textbf{Score} & \textbf{Margin / Discrepancy Summary} \\
+\midrule
+\endfirsthead
+
+\multicolumn{7}{@{}l}{\textit{\small Table 2 (continued): RFP Compliance Traceability Matrix}} \\
+\toprule
+\textbf{REQ-ID} & \textbf{Requirement Title} & \textbf{Status} & \textbf{Recommended P/N} & \textbf{Supplier} & \textbf{Score} & \textbf{Margin / Discrepancy Summary} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{7}{r@{}}{\textit{\small Continued on next page...}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+\BLOCK{if report.compliance_results}
+\BLOCK{for res in report.compliance_results}
+\BLOCK{set best = res.best_match}
+\VAR{res.requirement.req_id | escape_latex} &
+\VAR{res.requirement.title | escape_latex} &
+\BLOCK{if res.overall_status.value == 'COMPLIANT'}\textcolor{okgreen}{\textbf{\VAR{res.overall_status.value | escape_latex}}}\BLOCK{elif res.overall_status.value == 'PARTIAL_COMPLIANCE'}\textcolor{warnamber}{\textbf{\VAR{res.overall_status.value | escape_latex}}}\BLOCK{else}\textcolor{failred}{\textbf{\VAR{res.overall_status.value | escape_latex}}}\BLOCK{endif} &
+\VAR{(best.part_number if best else None) | escape_latex} &
+\VAR{(best.supplier_name if best else None) | escape_latex} &
+\BLOCK{if best}\VAR{"%.1f"|format(best.compliance_score)}\%\BLOCK{else}0.0\%\BLOCK{endif} &
+\BLOCK{if best}
+\BLOCK{if best.discrepancies}
+\VAR{(best.discrepancies | join('; ')) | escape_latex}
+\BLOCK{else}
+\VAR{(best.criteria_checks | map(attribute='margin_note') | join('; ')) | escape_latex}
+\BLOCK{endif}
+\BLOCK{else}
+\VAR{res.recommendation | escape_latex}
+\BLOCK{endif} \\
+\BLOCK{endfor}
+\BLOCK{else}
+\multicolumn{7}{c}{No RFP requirements evaluated.} \\
+\BLOCK{endif}
+\end{longtable}
+\endgroup
+
+\end{document}

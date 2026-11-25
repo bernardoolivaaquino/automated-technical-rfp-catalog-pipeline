@@ -1,0 +1,51 @@
+part_number,supplier_name,category_raw,description,material_spec,nominal_dim_raw,tolerance_raw,max_pressure_raw,operating_temp_raw,mass_raw,standards_raw,unit_price_usd,lead_time_days
+TI64-BOLT-M8,AeroFix Precision SA,Fastener,Titanium hex head structural bolt for wing-spar attachment,Ti-6Al-4V,8.0 mm,±0.025 mm,,-60 °C to 220 °C,14.5 g,"AS9100D, AMS 4928, NASM21250",18.40,14
+TI64-BOLT-M10,Safran Fixations Lyon,Fixation,Vis hexagonale structurale en titane pour longeron de voilure,Ti-6Al-4V (Grade 5),"10,0 mm","±0,03 mm",,-65 °C à 200 °C,24.2 g,"EN 9100, NASM21250, NADCAP",22.90,2 semaines
+NAS-6204-12,Pacific Aerospace Fasteners,Aerospace Fasteners,Close-tolerance alloy steel shear bolt 1/4 inch shank,4340 Alloy Steel,"1/4""",±0.001 in,,-65 °F to 350 °F,0.65 oz,"AS9100D, NAS6204, MIL-S-5000",9.75,10
+A286-NUT-M14,AéroVisserie Toulouse,Visserie,Écrou autofreiné haute température pour train d'atterrissage,A286 Superalloy,14.0 mm,±0.015 mm,,-65 °C à 420 °C,31.0 g,"AS9100D, NASM25027, NADCAP",16.80,3 weeks
+INC718-STUD-38,Turbine Hardware Corp,Fastener,Double-ended Inconel 718 turbine flange stud,Inconel 718,3/8 in,±0.02 mm,,-55 °C to 650 °C,42 g,"AS9100D, AMS 5662, NADCAP",34.50,21
+TI64-PIN-06,AeroFix Precision SA,Boulonnerie,Goupille de cisaillement en titane / Titanium shear pin,Ti-6Al-4V,6.0 mm,±0.012 mm,,210 K to 473 K,8.4 g,"AS9100D, EN 9100, AMS 4928",12.10,12
+MS21042-L4,Pacific Aerospace Fasteners,Fastener,Self-locking reduced hexagon aerospace nut,A286 Stainless,0.25 in,±0.03 mm,,-65 °F to 800 °F,4.8 g,"AS9100D, MS21042, NASM21042",3.45,7
+AL7075-RIV-05,Safran Fixations Lyon,Fixation,Rivet structural affleurant alliage aluminium 7075,7075-T6,4.8 mm,±0.025 mm,,-55 °C à 130 °C,2.1 g,"EN 9100, NAS1097, ISO 9001",1.15,10
+SS316-SCREW-M6,EuroFasten GmbH,Fastener,Corrosion-resistant socket head cap screw for avionics bay,316L Stainless Steel,"6,0 mm",±0.04 mm,,-60 °C to 260 °C,9.3 g,"ISO 9001, EN 9100, DIN 912",2.60,8
+TI64-BOLT-10IN,Pacific Aerospace Fasteners,Fastener,Imperial 1 inch structural titanium clevis bolt,Ti-6Al-4V,"25,4 mm",±0.03 mm,,-55 °C to 250 °C,0.18 lb,"AS9100D, AMS 4928, NASM",44.00,18
+ti64-bolt-m8 ,AeroFix Precision SA,Fastener,Duplicate entry for titanium hex head structural bolt M8,Ti-6Al-4V,8.0 mm,±0.025 mm,,-60 °C to 220 °C,14.5 g,"AS9100D, AMS 4928",18.40,14
+BAD-FST-TOL1,LowCost Fasteners Ltd,Fastener,Unfinished structural bolt with excessive dimensional play,4340 Alloy Steel,10.0 mm,±0.65 mm,,-40 °C to 150 °C,28 g,ISO 9001,3.10,5
+BAD-FST-TOL2,LowCost Fasteners Ltd,Fixation,Boulon hors tolérance aéronautique / Out-of-spec imperial bolt,316L Stainless Steel,"1/2""",±0.08 in,,-40 °C to 180 °C,1.2 oz,ISO 9001,4.20,6
+BAD-FST-NEG,AéroVisserie Toulouse,Fastener,Corrupted CAD import fastener with negative diameter,Ti-6Al-4V,-5.0 mm,±0.02 mm,,-55 °C to 200 °C,11.0 g,AS9100D,15.00,14
+VLV-174PH-25,HydraFlow Aerospace,Hydraulic Valve,High-pressure proportional hydraulic control valve 25.4 mm bore,17-4PH Stainless Steel,"25,4 mm",±0.04 mm,3500 psi,-55 °C to 150 °C,1.12 kg,"AS9100D, ISO 9001, ARP490",890.00,28
+VLV-FR-3000,MécaFluide Bordeaux,Vanne,Vanne de régulation hydraulique haute pression en acier 17-4PH,17-4PH,1.0 in,±0.05 mm,"24,0 MPa",-65 °F to 300 °F,2.4 lb,"EN 9100, ISO 9001, NADCAP",945.00,4 semaines
+VLV-CHK-19,HydraFlow Aerospace,Check Valve,Inline aerospace hydraulic check valve 3/4 inch port,316L Stainless Steel,3/4 in,±0.03 mm,300 bar,-54 °C to 135 °C,420 g,"AS9100D, AS4395, NADCAP",315.00,16
+VLV-SOL-12,MécaFluide Bordeaux,Électrovanne,Électrovanne carburant basse fuite / Low-leakage fuel solenoid valve,Inconel 718,12.7 mm,±0.025 mm,"14,5 MPa",-55 °C à 210 °C,680 g,"AS9100D, EN 9100, DO-160G",1120.00,30
+VLV-REL-5000,Valcor Flight Systems,Valve,High-pressure hydraulic relief valve rated to 5000 PSI,17-4PH Stainless Steel,19.05 mm,±0.035 mm,5000 PSI,-65 °F to 275 °F,0.85 kg,"AS9100D, MIL-PRF-5523, ISO 9001",760.00,21
+VLV-PNU-32,Valcor Flight Systems,Valve,Pneumatic bleed-air butterfly shutoff valve,Inconel 625,3.2 cm,±0.06 mm,2200 kPa,218 K to 573 K,1.65 kg,"AS9100D, AMS 5599, NADCAP",1480.00,35
+VLV-MAN-08,HydraFlow Aerospace,Valve,Compact manual bleed valve with imperial pressure rating,316L,8.0 mm,±0.03 mm,4000 lbf/in2,-50 °C to 180 °C,195 g,"AS9100D, ISO 9001",210.00,14
+VLV-BLEED-320,Turbine Hardware Corp,Vanne,Vanne d'isolement air prélevé / Bleed-air isolation valve 32 MPa,Inconel 718,30.0 mm,±0.04 mm,32 MPa,-55 °C to 320 °C,2.1 kg,"AS9100D, NADCAP, EN 9100",1950.00,42
+BAD-VLV-NOPRES,MécaFluide Bordeaux,Vanne,Vanne hydraulique sans pression nominale spécifiée,316L Stainless Steel,20.0 mm,±0.05 mm,,-40 °C to 140 °C,780 g,AS9100D,490.00,20
+BAD-VLV-NEGPRES,Valcor Flight Systems,Valve,Hydraulic shuttle valve with corrupted negative pressure rating,17-4PH,16.0 mm,±0.04 mm,-15 bar,-55 °C to 150 °C,520 g,"AS9100D, ISO 9001",410.00,18
+BAD-VLV-UNPARSE,LowCost Fasteners Ltd,Valve,Auxiliary valve with non-numeric pressure specification,316L,12.0 mm,±0.05 mm,high pressure,-30 °C to 120 °C,350 g,ISO 9001,180.00,15
+BAD-VLV-INVTEMP,HydraFlow Aerospace,Hydraulic Valve,Shutoff valve with inverted min/max operating temperatures,17-4PH Stainless Steel,22.0 mm,±0.04 mm,25 MPa,200 C to 50 C,910 g,"AS9100D, ISO 9001",640.00,25
+INC718-BAR-25,Aubert & Duval Alloys,Superalloy,Precipitation-hardened Inconel 718 turbine shaft bar stock,Inconel 718,25.4 mm,±0.05 mm,,-100 °C to 700 °C,3.85 kg,"AS9100D, AMS 5662, NADCAP",420.00,21
+INC718-BAR-40,Special Metals Aerospace,Alliage,Barre forgée en superalliage Inconel 718 pour arbre haute température,Inconel 718 (UNS N07718),4.0 cm,±0.08 mm,,-70 °C à 680 °C,6.2 kg,"EN 9100, AMS 5663, ISO 9001",615.00,3 weeks
+AL7075-PLT-16,Constellium Aero,Alliage aéronautique,Tôle épaisse en alliage d'aluminium 7075-T6 haute résistance,7075-T6 Aluminum,16.0 mm,±0.08 mm,,-65 °C à 160 °C,4.48 kg,"AS9100D, AMS 4045, NADCAP",185.00,12
+TI64-BIL-50,Aubert & Duval Alloys,Alloy,Forged Ti-6Al-4V aerospace structural billet,Ti-6Al-4V,0.05 m,±0.10 mm,,-60 °C to 350 °C,5.5 lb,"AS9100D, AMS 4928, EN 9100",540.00,25
+AL2024-SH-03,Constellium Aero,Alloy,Alclad 2024-T3 fuselage skin sheet 3.2 mm gauge,2024-T3 Aluminum,3.2 mm,±0.05 mm,,-65 °F to 250 °F,1.9 kg,"AS9100D, AMS 4041, NADCAP",98.00,10
+INC625-TUB-19,Special Metals Aerospace,Superalloy,Seamless Inconel 625 exhaust duct tubing 3/4 inch OD,Inconel 625,"3/4""",±0.05 mm,,-100 °C to 815 °C,1.35 kg,"AS9100D, AMS 5581, NADCAP",375.00,19
+SS174PH-ROD-22,Aubert & Duval Alloys,Alliage,Barre ronde en acier inoxydable 17-4PH H900,17-4PH Stainless Steel,"22,0 mm",±0.04 mm,,-55 °C à 315 °C,2.95 kg,"EN 9100, AMS 5643, ISO 9001",162.00,14
+A286-BAR-30,Special Metals Aerospace,Alloy,Heat-treated A286 iron-base superalloy round bar,A286,30.0 mm,±0.06 mm,,200 K to 923 K,3.4 kg,"AS9100D, AMS 5732, NADCAP",295.00,18
+BAD-ALY-NOMAT,LowCost Fasteners Ltd,Alloy,Extruded aerospace bar stock with missing alloy designation,N/A,25.0 mm,±0.05 mm,,-50 °C to 300 °C,2.2 kg,AS9100D,110.00,12
+BAD-ALY-UNCERT,EuroFasten GmbH,Alliage,Barre d'alliage non certifiée sans traçabilité matière,7075-T6,20.0 mm,±0.05 mm,,-55 °C to 150 °C,1.8 kg,Non certifié,65.00,7
+SEAL-FVMQ-028,Joints Aéronautiques SA,Joint d'étanchéité,Joint torique fluorosilicone résistant au kérosène Jet-A1,Fluorosilicone,"28,0 mm",±0.05 mm,"14,5 MPa",-60 °C à 210 °C,12.0 g,"AS9100D, AMS-R-25988, AS568",14.50,10
+SEAL-FKM-035,Parker Aerospace Seals,O-Ring Seal,Viton FKM high-temperature hydraulic actuator O-ring,FKM (Viton),35.0 mm,±0.06 mm,21 MPa,-40 °C to 220 °C,0.55 oz,"AS9100D, AMS 7276, AS568",11.80,9
+SEAL-PTFE-020,Parker Aerospace Seals,Seal,Spring-energized PTFE dynamic rod seal for flight actuators,PTFE,20.0 mm,±0.03 mm,30 MPa,-65 °F to 450 °F,18.5 g,"AS9100D, MIL-P-46191, ISO 9001",38.00,15
+SEAL-FFKM-042,Joints Aéronautiques SA,Joint,Joint perfluoroélastomère haute inertie chimique,FFKM (Kalrez),42.0 mm,±0.05 mm,180 bar,-25 °C à 300 °C,22.0 g,"EN 9100, AMS 7257, NADCAP",82.00,2 semaines
+SEAL-EPDM-025,Parker Aerospace Seals,Seal,Skydrol-compatible EPDM hydraulic manifold O-ring,EPDM,1.0 in,±0.04 mm,3000 psi,-55 °C to 150 °C,9.8 g,"AS9100D, NAS1613, AS568",7.90,7
+BAD-SL-NOTEMP,Joints Aéronautiques SA,Joint,Joint statique sans plage de température qualifiée,Fluorosilicone,30.0 mm,±0.05 mm,12 MPa,,14 g,"AS9100D, AS568",10.20,10
+BAD-SL-NOCERT,LowCost Fasteners Ltd,Seal,Unverified elastomeric O-ring missing quality standards,FKM (Viton),24.0 mm,±0.05 mm,15 MPa,-30 °C to 180 °C,10 g,,4.50,5
+FIT-AN815-08,AeroFluid Connectors,Fitting,Flared hydraulic union fitting 1/2 inch aluminum alloy,7075-T6,"1/2""",±0.03 mm,3000 psi,-55 °C to 135 °C,36 g,"AS9100D, SAE AS4395, MS21902",29.00,12
+FIT-TI-012,Raccords Aviation Nice,Raccord,Raccord hydraulique coudé 90 degrés en titane haute pression,Ti-6Al-4V,12.0 mm,±0.025 mm,35 MPa,-55 °C à 205 °C,48 g,"EN 9100, AS9100D, SAE AS4395",132.00,18
+SNS-TEMP-PT100,Avionics SenseTech,Capteur,Sonde de température carburant Pt100 / Fuel RTD probe,316L Stainless Steel,12.7 mm,±0.02 mm,18 MPa,-60 °C to 260 °C,95 g,"AS9100D, DO-160G, EN 9100",415.00,21
+SNS-PRS-250,Avionics SenseTech,Sensor,Absolute hydraulic line pressure transducer 25 MPa,Inconel 625,15.0 mm,±0.02 mm,25 MPa,-55 °C to 175 °C,140 g,"AS9100D, DO-160G, MIL-STD-810",590.00,3 weeks
+ACT-ROT-400,Systèmes Vol Toulouse,Actionneur,Actionneur rotatif électromécanique pour volet / Flap EMA actuator,17-4PH Stainless Steel,45.0 mm,±0.03 mm,22 MPa,-55 °C à 135 °C,1.85 kg,"AS9100D, MIL-PRF-5440, EN 9100",2180.00,35
+BAD-FIT-NODIM,AeroFluid Connectors,Fitting,Bulkhead adapter tee missing nominal port dimension,Ti-6Al-4V,,±0.03 mm,28 MPa,-55 °C to 200 °C,54 g,"AS9100D, SAE AS4395",115.00,15
+BAD-UNK-001,LowCost Fasteners Ltd,Unclassified Hardware,Ambiguous bracket assembly with informal sizing note,6061-T6,approx half inch?,±0.05 mm,,-20 °C to 100 °C,75 g,ISO 9001,19.00,10
